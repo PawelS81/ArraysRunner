@@ -4,45 +4,48 @@ public class ArraysRunner {
 
     public static void main(String[] args) {
 
-        System.out.println("Wyświetlam tabelę wypełnioną liczbami od 0 do 9");
         int[] nextNumbersTab = new int[10];
         for (int i = 0; i < nextNumbersTab.length; i++) {
             nextNumbersTab[i] = i;
-            System.out.print(nextNumbersTab[i] + " ");
+            System.out.print(nextNumbersTab[i] + ", ");
         }
+
         System.out.println();
         System.out.println("Teraz co druga liczba w tabeli jest zwiększona o wartośc jej poprzednika");
 
-        for (int i = 0; i < nextNumbersTab.length; i++) {
-            if (i % 2 != 0) {
-                System.out.print(i + i - 1 + " ");
+        int[] tab2 = new int[10];
+        for (int i = 0; i < tab2.length; i++) {
+            tab2[i] = i;
+            if (tab2[i] % 2 != 0) {
+                tab2[i] = i + i - 1;
             } else {
-                System.out.print(i + " ");
+                tab2[i] = i;
             }
+            System.out.print(tab2[i] + ", ");
         }
         System.out.println();
         System.out.println("Teraz każdą liczbę parzystą dzielimy przez 2");
-        for (int i = 0; i < nextNumbersTab.length; i++) {
+
+        int[] tab3 = new int[10];
+        for (int i = 0; i < tab3.length; i++) {
             if (i % 2 != 0) {
-                System.out.print(i + i - 1 + " ");
+                tab3[i] = i + i - 1;
             } else {
-                System.out.print(i / 2 + " ");
+                tab3[i] = i / 2;
             }
+            System.out.print(tab3[i] + ", ");
         }
         System.out.println();
         System.out.println("Teraz sumujemy wszystkie liczby w tablicy");
-        int oddSum = 0;
-        int evenSum = 0;
-        for (int i = 0; i < nextNumbersTab.length; i++) {
-            if (i % 2 != 0) {
-                oddSum += (i + i - 1);
-            } else {
-                evenSum += (i / 2);
-            }
-            int sum = oddSum + evenSum;
-            System.out.println("Suma liczb w tabeli to: " + sum);
 
-        // Tu mam problem - nie wiem jak napisać aby drukowało tylko ostatni wynik.
+
+        int suma = 0;
+        int nr = 0;
+        while (nr < tab3.length) {
+            suma = suma + tab3[nr];
+            nr++;
         }
+
+        System.out.print("Suma liczb w tabeli to: " + suma);
     }
 }
