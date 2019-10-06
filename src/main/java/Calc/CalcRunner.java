@@ -15,6 +15,8 @@ public class CalcRunner {
 
     public static void main(String[] args) {
 
+        Calculator calc = new Calculator();
+
         System.out.println("Podaj pierwszą liczbę: ");
         Scanner x = new Scanner(System.in);
         double a = x.nextInt();
@@ -31,7 +33,29 @@ public class CalcRunner {
         System.out.println("'4' / dzielenie");
         System.out.println("'5' ^ potęgowanie");
         Scanner c = new Scanner(System.in);
-        int choice = c.nextInt();
+        int choosen = c.nextInt();
+
+        switch (choosen) {
+            case 1:
+                System.out.println(a + " + " + b + " = " + calc.add(a,b));
+                break;
+            case 2:
+                System.out.println(a + " - " + b + " = " + calc.subtract(a,b));
+                break;
+            case 3:
+                System.out.println(a + " * " + b + " = " + calc.multiply(a,b));
+                break;
+            case 4:
+                System.out.println(a + " / " + b + " = " + calc.divide(a,b));
+                break:
+            case 5:
+                System.out.println(a + " ^ " + b + " = " + calc.MathPow(a,b));
+                break;
+                case
+
+
+
+        }
 
 
 
