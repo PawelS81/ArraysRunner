@@ -16,8 +16,10 @@ public class CalcRunner {
     public static void main(String[] args) {
 
         Calculator calc = new Calculator();
+        boolean error = false;
+        do {
+            try {
 
-        try {
                 System.out.println("Podaj pierwszą liczbę: ");
                 Scanner x = new Scanner(System.in);
                 int a = x.nextInt();
@@ -37,7 +39,7 @@ public class CalcRunner {
                 Scanner c = new Scanner(System.in);
                 int choosen = c.nextInt();
                 if (choosen >= 0 && choosen <= 5) {
-
+                    error = false;
                     switch (choosen) {
                         case 1:
                             System.out.println(a + " + " + b + " = " + calc.add(a, b));
@@ -54,19 +56,20 @@ public class CalcRunner {
                         case 5:
                             System.out.println(a + " ^ " + b + " = " + calc.MathPow(a, b));
                             break;
-                        default:
-                            System.out.println("Źle wybrałeś, spróbuj jeszcze raz.");
                     }
                 } else {
-                    System.out.println("Źle wybrałeś, spróbuj jeszcze raz.");
+                    System.out.println("Podaj cyfrę od 1 do 5, spróbuj jeszcze raz.");
+                    error = true;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Podano niewłaściwe dane, spróbuj jeszcze raz.");
+                error = true;
             } catch (ArithmeticException z) {
                 System.out.println("Dzielenie przez 0 jest niewykonalne!");
-
+                error = true;
             }
-        }
-}
+        } while (error = true);
+            }
+    }
 
 
