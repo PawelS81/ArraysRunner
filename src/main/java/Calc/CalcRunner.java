@@ -16,11 +16,8 @@ public class CalcRunner {
     public static void main(String[] args) {
 
         Calculator calc = new Calculator();
-        boolean error = true;
 
         try {
-                error = false;
-
                 System.out.println("Podaj pierwszą liczbę: ");
                 Scanner x = new Scanner(System.in);
                 int a = x.nextInt();
@@ -69,7 +66,7 @@ public class CalcRunner {
                 System.out.println("Dzielenie przez 0 jest niewykonalne!");
 
             }
-    }
+        }
 }
 
 
