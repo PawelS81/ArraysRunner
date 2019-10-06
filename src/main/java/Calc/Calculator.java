@@ -15,7 +15,12 @@ public class Calculator {
     }
 
     public double divide (double a, double b) {
-       return (int) a / (int) b; }
+        if (b == 0) {
+            return (int) a / (int) b;
+        } else {
+            return a / b;
+        }
+    }
 
    public double MathPow (double a, double b) {
         return Math.pow(a,b);
