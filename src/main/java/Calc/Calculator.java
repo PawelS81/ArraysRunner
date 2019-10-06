@@ -2,19 +2,19 @@ package Calc;
 
 public class Calculator {
 
-    private double add(double a, double b) {
+    public double add(double a, double b) {
         return a+b;
     }
 
-    private double subtract(double a, double b) {
+    public double subtract(double a, double b) {
         return a-b;
     }
 
-    private double multiply (double a, double b) {
+    public double multiply (double a, double b) {
         return a*b;
     }
 
-    private double divide (double a, double b) {
+    public double divide (double a, double b) {
         if (b == 0) {
             return (int) a / (int) b;
         } else {
@@ -22,7 +22,7 @@ public class Calculator {
         }
     }
 
-   private long MathPow (double a, double b) {
+   public long MathPow (double a, double b) {
         return (long)Math.pow(a,b);
     }
 }
