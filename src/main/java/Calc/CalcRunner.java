@@ -57,6 +57,7 @@ public class CalcRunner {
                             System.out.println(a + " ^ " + b + " = " + calc.MathPow(a, b));
                             break;
                     }
+                    break;
                 } else {
                     System.out.println("Podaj cyfrę od 1 do 5, spróbuj jeszcze raz.");
                     error = true;
