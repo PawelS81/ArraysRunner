@@ -21,5 +21,7 @@ public class Calculator {
     public double MathPow(double a, double b) {
         return Math.pow(a,b);
     }
+
+
 }
 
