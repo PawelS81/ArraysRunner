@@ -17,8 +17,8 @@ public class CalcRunner {
 
         Calculator calc = new Calculator();
         boolean error = true;
-        do {
-            try {
+
+        try {
                 error = false;
 
                 System.out.println("Podaj pierwszą liczbę: ");
@@ -69,8 +69,6 @@ public class CalcRunner {
                 System.out.println("Dzielenie przez 0 jest niewykonalne!");
 
             }
-        } while (error);
-        System.out.println("Spróbuj jeszcze raz");
     }
 }
 

@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/intellij+all
+# Created by https://www.gitignore.io/api/doubleellij+all
 # Edit at https://www.gitignore.io/?templates=intellij+all
 
 ### Intellij+all ###
@@ -85,6 +85,6 @@ modules.xml
 *.ipr
 
 # Sonarlint plugin
-.idea/sonarlint
+.idea/sonarldouble
 
 # End of https://www.gitignore.io/api/intellij+all

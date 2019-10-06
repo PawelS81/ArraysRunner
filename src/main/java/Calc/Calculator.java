@@ -2,24 +2,23 @@ package Calc;
 
 public class Calculator {
 
-    public int add(int a, int b) {
+    public double add(double a, double b) {
         return a+b;
     }
 
-    public int subtract(int a, int b) {
+    public double subtract(double a, double b) {
         return a-b;
     }
 
-    public int multiply (int a, int b) {
+    public double multiply (double a, double b) {
         return a*b;
     }
 
-    public int divide (int a, int b) {return a / b;}
+    public double divide (double a, double b) {
+       return (int) a / (int) b; }
 
-    public int MathPow(int a, int b) {
-        return (int) Math.pow(a,b);
+   public double MathPow (double a, double b) {
+        return Math.pow(a,b);
     }
-
-
 }
 
